@@ -1,15 +1,13 @@
+// logger provides a consistent logging implementation for use across WeMoney back end services
 package logger
 
 import (
-	"strings"
-
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 )
 
-// Init sets up a global logger instance
-func InitLogger() {
-	logLevel := strings.ToUpper("DEBUG") // hardcoded TODO: add env var
+// Init sets up a global logger instance, taking logLevel as a param
+func InitLogger(logLevel string) {
 	switch logLevel {
 	case "TRACE":
 		zerolog.SetGlobalLevel(zerolog.TraceLevel)
