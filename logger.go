@@ -10,6 +10,8 @@ import (
 	"github.com/rs/zerolog/log"
 )
 
+type Level = zerolog.Level
+
 const (
 	DebugLevel = zerolog.DebugLevel
 	InfoLevel  = zerolog.InfoLevel
